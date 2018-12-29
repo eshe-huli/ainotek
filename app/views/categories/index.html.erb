@@ -1,0 +1,84 @@
+
+<!-- Page Header -->
+<div class="inner-page-header">
+	<div class="container">
+		<div class="row">
+
+			<!-- Page Title -->
+			<div class="col-md-8">
+				<h1 class="title">Blog - Categories List</h1>
+				<div class="subtitle">There are many variations of passages </div>
+			</div>
+			<!-- /Page Title -->
+
+			<!-- Breadcrumbs -->
+			<div class="col-md-4">
+				<ul class="breadcrumb">
+					<li><i class="fa fa-fw fa-home"></i> <a href="<%= root_path %>">Home</a></li>
+					<li><a href="<%= posts_path %>">Blog</a></li>
+					<li>Categories</li>
+				</ul>
+			</div>
+			<!-- /Breadcrumbs -->
+
+		</div>
+	</div>
+</div>
+<!-- /Page Header -->
+<div class="title">Categories</div>
+
+<table>
+							<a href="<%= new_category_path %>"><button class="btn btn-rounded btn-blue">
+							<i class="icon fa fa-plus" title="Add"></i>	
+							 </button></a>
+
+
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Nom</td>
+			<td>Actions</td>	
+		</tr>
+	</thead>>
+
+		<tbody>
+			<%= @categories.each do |category| %>
+				<tr>
+					<td><%= category.id%></td>
+					<td><%= category.name%></td>
+					<td>									
+						<!-- controls -->
+						<div>
+							<a href="<%= edit_category_path(category.id) %>"><button class="btn btn-rounded btn-theme">
+							<i class="icon fa fa-edit" title="Edit"></i>	
+							 </button></a>
+
+							<a href="<%= category_path(category.id) %>" class="btn btn-rounded btn-red"
+								data-confirm="Delete it?"
+								data-method="delete">
+							<i class="icon fa fa-trash" title="Delete"></i>	
+							 </a>
+						</div>
+						<!-- /controls -->
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+</table>
+
+
+
+				<!-- Widget: Categories -->
+				<div class="widget">
+
+					<ul class="sidebar-menu">
+						<li><a href="#">Photography</a></li>
+						<li><a href="#">Photography</a></li>
+						<li><a href="#">Illustration</a></li>
+						<li><a href="#">Web-Design</a></li>
+						<li><a href="#">Art</a></li>
+						<li><a href="#">Coding</a></li>
+					</ul>
+
+				</div>
+				<!-- /Widget: Categories -->

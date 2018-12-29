@@ -1,0 +1,568 @@
+
+<!-- Page Header -->
+<div class="inner-page-header">
+	<div class="container">
+		<div class="row">
+
+			<!-- Page Title -->
+			<div class="col-md-8">
+				<h1 class="title">Blog - Posts List</h1>
+				<div class="subtitle">There are many variations of passages </div>
+			</div>
+			<!-- /Page Title -->
+
+			<!-- Breadcrumbs -->
+			<div class="col-md-4">
+				<ul class="breadcrumb">
+					<li><i class="fa fa-fw fa-home"></i> <a href="<% root_path %>">Home</a></li>
+					<li>Blog</li>
+				</ul>
+			</div>
+			<!-- /Breadcrumbs -->
+
+		</div>
+	</div>
+</div>
+<!-- /Page Header -->
+
+<!-- Main -->
+<main class="main-container">
+
+	<div class="container">
+		<div class="row">
+
+			<!-- Blog Content -->
+			<div class="col-md-9">
+
+				<!-- Posts List -->
+                <div class="posts-list">
+
+                <%= @posts.each do |p| %>
+
+					<!-- Single Post With Image -->
+					<article class="blog-post">
+
+						<!-- Post Image -->
+						<div class="image">
+							<a href="#" class="image-popup">
+								<div class="gallery-image">
+									<%= image_tag("project-01.jpg", :alt => "") %>
+								</div> 
+ 							</a>
+						</div>
+						<!-- /Post Image -->
+
+						<!-- Content -->
+						<div class="data">
+
+							<!-- Post Title -->
+							<h2 class="title"><%= p.title%></h2>
+							<!-- /Post Title -->
+
+							<!-- Post Content -->
+							<div class="content">
+                                <p>
+                                <%= p.content %>
+								</p>
+							</div>
+							<!-- /Post Content -->
+
+							<!-- Post Metadata -->
+							<ul class="list-inline meta">
+								<li><i class="icon fa fa-calendar"></i> January, 17, 2016</li>
+								<li><i class="icon fa fa-user"></i> by <a href="#"><%= p.author %></a></li>
+								<li><i class="icon fa fa-tags"></i> <a href="#">Photography</a>, <a href="#">Illustration</a></li>
+								<li><i class="icon fa fa-comments"></i> <a href="#">12 Comments</a></li>
+							</ul>
+							<!-- /Post Metadata -->
+
+							<!-- Read More Button -->
+							<div class="read-more-button">
+								<a href="<%= post_path(p.id) %>" class="btn btn-theme">Read More <i class="fa fa-fw fa-angle-double-right"></i></a>
+							</div>
+							<!-- /Read More Button -->
+
+						</div>
+						<!-- /Content -->
+
+					</article>
+					<!-- /Single Post With Image -->
+
+				<% end %>
+
+					<!-- Single Post With Image Carousel -->
+					<article class="blog-post">
+
+						<!-- Post Image -->
+						<div class="image">
+
+							<!-- Carousel -->
+							<div class="img-carousel-pagination owl-carousel owl-theme">
+								<div class="item">
+									<a href="images/project-02.jpg" class="image-popup">
+										<div class="gallery-image">
+											<% image_tag("project-02.jpg", :alt => "" ) %>
+										</div>
+									</a>
+								</div>
+								<div class="item">
+									<a href="images/project-03.jpg" class="image-popup">
+										<div class="gallery-image">
+											<% image_tag("project-03.jpg", :alt => "") %>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- /Carousel -->
+
+						</div>
+						<!-- /Post Image -->
+
+						<!-- Content -->
+						<div class="data">
+
+							<!-- Post Title -->
+							<h2 class="title">Single Post Image Carousel</h2>
+							<!-- /Post Title -->
+
+							<!-- Post Content -->
+							<div class="content">
+								<p>
+									It is a long established fact that a reader will be distracted by the readable content of a
+									page when looking at its layout. The point of using Lorem Ipsum is that it has a
+									more-or-less normal distribution of letters, as opposed to using 'Content here, content
+									here', making it look like readable English. Many desktop publishing packages and web page
+									editors now use Lorem Ipsum as their default model text.
+								</p>
+							</div>
+							<!-- /Post Content -->
+
+							<!-- Post Metadata -->
+							<ul class="list-inline meta">
+								<li><i class="icon fa fa-calendar"></i> January, 17, 2016</li>
+								<li><i class="icon fa fa-user"></i> by <a href="#">profart</a></li>
+								<li><i class="icon fa fa-tags"></i> <a href="#">Photography</a>, <a href="#">Illustration</a></li>
+								<li><i class="icon fa fa-comments"></i> <a href="#">12 Comments</a></li>
+							</ul>
+							<!-- /Post Metadata -->
+
+							<!-- Read More Button -->
+							<div class="read-more-button">
+								<a href="#" class="btn btn-theme">Read More <i class="fa fa-fw fa-angle-double-right"></i></a>
+							</div>
+							<!-- /Read More Button -->
+
+						</div>
+						<!-- /Content -->
+
+					</article>
+                    <!-- /Single Post With Image Carousel -->
+
+					<!-- Single Post With iFrame Video -->
+					<article class="blog-post">
+
+						<!-- Post Image -->
+						<div class="image">
+							<!-- iFrame Video -->
+							<iframe src="https://www.youtube.com/embed/CUw0f_ae0BM" allowfullscreen></iframe>
+							<!-- /iFrame Video -->
+						</div>
+						<!-- /Post Image -->
+
+						<!-- Content -->
+						<div class="data">
+
+							<!-- Post Title -->
+							<h2 class="title">Single Post With iFrame Video</h2>
+							<!-- /Post Title -->
+
+							<!-- Post Content -->
+							<div class="content">
+								<p>
+									It is a long established fact that a reader will be distracted by the readable content of a
+									page when looking at its layout. The point of using Lorem Ipsum is that it has a
+									more-or-less normal distribution of letters, as opposed to using 'Content here, content
+									here', making it look like readable English. Many desktop publishing packages and web page
+									editors now use Lorem Ipsum as their default model text.
+								</p>
+							</div>
+							<!-- /Post Content -->
+
+							<!-- Post Metadata -->
+							<ul class="list-inline meta">
+								<li><i class="icon fa fa-calendar"></i> January, 17, 2016</li>
+								<li><i class="icon fa fa-user"></i> by <a href="#">profart</a></li>
+								<li><i class="icon fa fa-tags"></i> <a href="#">Photography</a>, <a href="#">Illustration</a></li>
+								<li><i class="icon fa fa-comments"></i> <a href="#">12 Comments</a></li>
+							</ul>
+							<!-- /Post Metadata -->
+
+							<!-- Read More Button -->
+							<div class="read-more-button">
+								<a href="#" class="btn btn-theme">Read More <i class="fa fa-fw fa-angle-double-right"></i></a>
+							</div>
+							<!-- /Read More Button -->
+
+						</div>
+						<!-- /Content -->
+
+					</article>
+					<!-- /Single Post With iFrame Video -->
+
+					<!-- Single Post Without Media -->
+					<article class="blog-post">
+
+						<!-- Content -->
+						<div class="data">
+
+							<!-- Post Title -->
+							<h2 class="title">Single Post Without Media</h2>
+							<!-- /Post Title -->
+
+							<!-- Post Content -->
+							<div class="content">
+								<p>
+									It is a long established fact that a reader will be distracted by the readable content of a
+									page when looking at its layout. The point of using Lorem Ipsum is that it has a
+									more-or-less normal distribution of letters, as opposed to using 'Content here, content
+									here', making it look like readable English. Many desktop publishing packages and web page
+									editors now use Lorem Ipsum as their default model text.
+								</p>
+							</div>
+							<!-- /Post Content -->
+
+							<!-- Post Metadata -->
+							<ul class="list-inline meta">
+								<li><i class="icon fa fa-calendar"></i> January, 17, 2016</li>
+								<li><i class="icon fa fa-user"></i> by <a href="#">profart</a></li>
+								<li><i class="icon fa fa-tags"></i> <a href="#">Photography</a>, <a href="#">Illustration</a></li>
+								<li><i class="icon fa fa-comments"></i> <a href="#">12 Comments</a></li>
+							</ul>
+							<!-- /Post Metadata -->
+
+							<!-- Read More Button -->
+							<div class="read-more-button">
+								<a href="#" class="btn btn-theme">Read More <i class="fa fa-fw fa-angle-double-right"></i></a>
+							</div>
+							<!-- /Read More Button -->
+
+						</div>
+						<!-- /Content -->
+
+					</article>
+					<!-- /Single Post Without Media -->
+
+					<!-- Single Post With Quote Content -->
+					<article class="blog-post">
+
+						<!-- Content -->
+						<div class="data">
+
+							<!-- Post Title -->
+							<h2 class="title">Single Post With Quote Content</h2>
+							<!-- /Post Title -->
+
+							<!-- Post Content -->
+							<div class="content">
+								<blockquote>
+									It is a long established fact that a reader will be distracted by the readable content of a
+									page when looking at its layout. The point of using Lorem Ipsum is that it has a
+									more-or-less normal distribution of letters, as opposed to using 'Content here, content
+									here'.
+								</blockquote>
+							</div>
+							<!-- /Post Content -->
+
+							<!-- Post Metadata -->
+							<ul class="list-inline meta">
+								<li><i class="icon fa fa-calendar"></i> January, 17, 2016</li>
+								<li><i class="icon fa fa-user"></i> by <a href="#">profart</a></li>
+								<li><i class="icon fa fa-tags"></i> <a href="#">Photography</a>, <a href="#">Illustration</a></li>
+								<li><i class="icon fa fa-comments"></i> <a href="#">12 Comments</a></li>
+							</ul>
+							<!-- /Post Metadata -->
+
+							<!-- Read More Button -->
+							<div class="read-more-button">
+								<a href="#" class="btn btn-theme">Read More <i class="fa fa-fw fa-angle-double-right"></i></a>
+							</div>
+							<!-- /Read More Button -->
+
+						</div>
+						<!-- /Content -->
+
+					</article>
+					<!-- /Single Post With Quote Content -->
+
+				</div>
+				<!-- /Posts List -->
+
+				<!-- Pagination -->
+				<ul class="pagination">
+					<li><span>Page 1 of 5</span></li>
+					<li><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">Next</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+				<!-- /Pagination -->
+
+			</div>
+			<!-- /Blog Content -->
+
+			<!-- Blog Sidebar -->
+			<div class="col-md-3">
+
+				<!-- Widget: Categories -->
+				<div class="widget">
+
+					<div class="title"><a href="<%= categories_path %>">Categories</a></div>
+					<ul class="sidebar-menu">
+						<%= @categories.each do |c|  %>
+							<li><a href="<%= categories_path %>"> <%= c.name %></a></li>
+						<% end %>
+					</ul>
+
+				</div>
+				<!-- /Widget: Categories -->
+
+				<!-- Widget: Search -->
+				<div class="widget">
+					<div class="search">
+						<form method="post" class="form-inline">
+							<div class="input-group">
+								<input type="email" class="form-control" placeholder="Search...*" required>
+								<div class="input-group-btn">
+									<button type="submit" class="btn btn-theme"><i class="fa fa-fw fa-search"></i></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /Widget: Search -->
+
+				<!-- Widget: Posts -->
+				<div class="widget">
+
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#recent" data-toggle="tab"><i class="icon fa fa-star"></i> Recent</a></li>
+						<li><a href="#popular" data-toggle="tab">Popular</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div id="recent" class="tab-pane fade in active">
+							<ul class="post-list">
+
+								<!-- Post -->
+								<li>
+									<div class="media post">
+										<div class="media-left">
+											<div class="image">
+												<img src="images/last-post-01.jpg" alt="">
+											</div>
+										</div>
+										<div class="media-body">
+											<p class="text">
+												It is a long established fact that a reader.
+											</p>
+											<a href="#">Read more <i class="fa fa-angle-double-right"></i></a>
+										</div>
+									</div>
+								</li>
+								<!-- /Post -->
+
+								<!-- Post -->
+								<li>
+									<div class="media post">
+										<div class="media-left">
+											<div class="image">
+												<img src="images/last-post-02.jpg" alt="">
+											</div>
+										</div>
+										<div class="media-body">
+											<p class="text">
+												It is a long established fact that a reader.
+											</p>
+											<a href="#">Read more <i class="fa fa-angle-double-right"></i></a>
+										</div>
+									</div>
+								</li>
+								<!-- /Post -->
+
+								<!-- Post -->
+								<li>
+									<div class="media post">
+										<div class="media-left">
+											<div class="image">
+												<img src="images/last-post-03.jpg" alt="">
+											</div>
+										</div>
+										<div class="media-body">
+											<p class="text">
+												It is a long established fact that a reader.
+											</p>
+											<a href="#">Read more <i class="fa fa-angle-double-right"></i></a>
+										</div>
+									</div>
+								</li>
+								<!-- /Post -->
+
+							</ul>
+						</div>
+
+						<div id="popular" class="tab-pane fade">
+							<ul class="post-list">
+
+								<!-- Post -->
+								<li>
+									<div class="media post">
+										<div class="media-left">
+											<div class="image">
+												<img src="images/last-post-04.jpg" alt="">
+											</div>
+										</div>
+										<div class="media-body">
+											<p class="text">
+												It is a long established fact that a reader.
+											</p>
+											<a href="#">Read more <i class="fa fa-angle-double-right"></i></a>
+										</div>
+									</div>
+								</li>
+								<!-- /Post -->
+
+								<!-- Post -->
+								<li>
+									<div class="media post">
+										<div class="media-left">
+											<div class="image">
+												<img src="images/last-post-05.jpg" alt="">
+											</div>
+										</div>
+										<div class="media-body">
+											<p class="text">
+												It is a long established fact that a reader.
+											</p>
+											<a href="#">Read more <i class="fa fa-angle-double-right"></i></a>
+										</div>
+									</div>
+								</li>
+								<!-- /Post -->
+
+								<!-- Post -->
+								<li>
+									<div class="media post">
+										<div class="media-left">
+											<div class="image">
+												<img src="images/last-post-06.jpg" alt="">
+											</div>
+										</div>
+										<div class="media-body">
+											<p class="text">
+												It is a long established fact that a reader.
+											</p>
+											<a href="#">Read more <i class="fa fa-angle-double-right"></i></a>
+										</div>
+									</div>
+								</li>
+								<!-- /Post -->
+
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<!-- /Widget: Posts -->
+
+				<!-- Widget: Advert -->
+				<div class="widget">
+
+					<div class="advert bg-light-gray">
+						<div class="vertical-middle text-center">Advert Block</div>
+					</div>
+
+				</div>
+				<!-- /Widget: Advert -->
+
+				<!-- Widget: Tags -->
+				<div class="widget">
+
+					<div class="title">Tags</div>
+					<div class="tags">
+						<a href="#" class="tag">web</a>
+						<a href="#" class="tag">design</a>
+						<a href="#" class="tag">clean</a>
+						<a href="#" class="tag">minimal</a>
+						<a href="#" class="tag">pixel perfect</a>
+						<a href="#" class="tag">blog</a>
+						<a href="#" class="tag">gallery</a>
+					</div>
+
+				</div>
+				<!-- /Widget: Tags -->
+
+				<div class="widget">
+
+					<div class="title">Recent Comments</div>
+					<ul class="recent-comments">
+						<li>
+							<div class="media">
+								<div class="media-left">
+									<i class="fa fa-fw fa-1dot5 fa-commenting-o"></i>
+								</div>
+								<div class="media-body">
+									<a href="#">profart</a> on <a href="#">Single Post With Image</a>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="media">
+								<div class="media-left">
+									<i class="fa fa-fw fa-1dot5 fa-commenting-o"></i>
+								</div>
+								<div class="media-body">
+									<a href="#">profart</a> on <a href="#">Single Post Image Carousel</a>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="media">
+								<div class="media-left">
+									<i class="fa fa-fw fa-1dot5 fa-commenting-o"></i>
+								</div>
+								<div class="media-body">
+									<a href="#">profart</a> on <a href="#">Single Post With iFrame Video</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+
+				<!-- Widget: Categories -->
+				<div class="widget">
+
+					<div class="title">Meta</div>
+					<ul class="sidebar-menu">
+						<li><a href="#"><i class="icon fa fa-fw fa-sign-in"></i> Login</a></li>
+						<li><a href="#"><i class="icon fa fa-fw fa-rss-square"></i> RSS Entries</a></li>
+						<li><a href="#"><i class="icon fa fa-fw fa-comments-o"></i> RSS Comments</a></li>
+					</ul>
+
+				</div>
+				<!-- /Widget: Categories -->
+
+			</div>
+			<!-- /Blog Sidebar -->
+
+		</div>
+	</div>
+
+</main>
+<!-- /Main -->

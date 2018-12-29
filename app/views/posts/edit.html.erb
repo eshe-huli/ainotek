@@ -1,0 +1,205 @@
+<!-- Page Header -->
+<div class="inner-page-header">
+	<div class="container">
+		<div class="row">
+
+			<!-- Page Title -->
+			<div class="col-md-8">
+				<h1 class="title">Edit Blog</h1>
+				<div class="subtitle">You are editing post <%= @post.id %> </div>
+			</div>
+			<!-- /Page Title -->
+
+			<!-- Breadcrumbs -->
+			<div class="col-md-4">
+				<ul class="breadcrumb">
+					<li><i class="fa fa-fw fa-home"></i> <a href="<%= root_path %>">Home</a></li>
+					<li><a href="<%= posts_path %>">Blog</a></li>
+					<li>Edit</li>
+				</ul>
+			</div>
+			<!-- /Breadcrumbs -->
+
+		</div>
+	</div>
+</div>
+<!-- /Page Header -->
+
+<%= form_for @post do |f| %>
+
+<!-- Main -->
+<main class="main-container">
+
+	<div class="container">
+		<div class="row">
+
+			<!-- Blog Content -->
+			<div class="col-md-9">
+
+				<!-- Posts List -->
+				<div class="posts-list">
+
+					<!-- Single Post With Image -->
+					<article class="blog-post">
+
+						<!-- Post Image -->
+						<div class="image">
+							<a href="images/project-01.jpg" class="image-popup">
+								<div class="gallery-image">
+
+									<%= image_tag("project-01.jpg", :alt => "") %>
+
+								</div>
+							</a>
+						</div>
+						<!-- /Post Image -->
+
+						<!-- Content -->
+						<div class="data">
+
+							<!-- Post Title -->
+							<label for="">Post Title:</label>
+							<h2 class="title"><%= f.text_field :title %></h2>
+							<!-- /Post Title -->
+
+							<!-- Post Metadata -->
+							<ul class="list-inline meta">
+								<li><i class="icon fa fa-calendar"></i> January, 17, 2016</li>
+								<li><i class="icon fa fa-user"></i> by <a href="#"><%= @post.author %></a></li>
+								<li><i class="icon fa fa-tags"></i> <a href="#">Photography</a>, <a href="#">Illustration</a></li>
+								<li><i class="icon fa fa-comments"></i> <a href="#">12 Comments</a></li>
+							</ul>
+							<!-- /Post Metadata -->
+
+							<!-- Post Content -->
+							<div class="content">
+								<label for="">Post content:</label>
+								<p>
+									<%= f.text_area :content, class: 'form-control' %>
+								</p>
+								<blockquote>
+									There are many variations of passages of Lorem Ipsum available, but the majority have
+									suffered alteration in some form, by injected humour, or randomised words which don't look
+									even slightly believable.
+								</blockquote>
+
+								<p>
+									It is a long established fact that a reader will be distracted by the readable content of a
+									page when looking at its layout. The point of using Lorem Ipsum is that it has a
+									more-or-less normal distribution of letters, as opposed to using 'Content here, content
+									here', making it look like readable English. Many desktop publishing packages and web page
+									editors now use Lorem Ipsum as their default model text.
+								</p>
+
+								<p>
+									If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+									embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+									tend to repeat predefined chunks as necessary, making this the first true generator on the
+									Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
+									sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem
+									Ipsum is therefore always free from repetition, injected humour, or non-characteristic words
+									etc.
+								</p>
+
+							</div>
+							<!-- /Post Content -->
+
+						</div>
+						<!-- /Content -->
+
+						<!-- Additional -->
+						<div class="row information">
+
+							<div class="col-sm-6">
+								<div class="tags">
+									<a class="tag" href="#">web</a>
+									<a class="tag" href="#">clean</a>
+									<a class="tag" href="#">gallery</a>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<ul class="list-inline social-inline">
+									<li><a href="#" class="fa fa-fw fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-fw fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-fw fa-google-plus"></a></li>
+									<li><a href="#" class="fa fa-fw fa-dribbble"></a></li>
+									<li><a href="#" class="fa fa-fw fa-pinterest"></a></li>
+								</ul>
+							</div>
+
+						</div><br>
+						<!-- /Additional -->
+					<div class="text-center">						
+						<button type="reset" class="btn btn-red btn-rounded">Annulé les modification</button>
+						<button type="submit" class="btn btn-theme btn-rounded">Validé les modification</button>
+					</div>
+
+					</article>
+					<!-- /Single Post With Image -->
+
+				</div>
+				<!-- /Posts List -->
+
+
+			</div>
+			<!-- /Blog Content -->
+
+			<!-- Blog Sidebar -->
+			<div class="col-md-3">
+
+				<!-- Widget: Categories -->
+				<div class="widget">
+
+					<div class="title">Categories</div>
+					<ul class="sidebar-menu">
+						<li><a href="#">Photography</a></li>
+						<li><a href="#">Illustration</a></li>
+						<li><a href="#">Web-Design</a></li>
+						<li><a href="#">Art</a></li>
+						<li><a href="#">Coding</a></li>
+					</ul>
+
+				</div>
+				<!-- /Widget: Categories -->
+
+				<!-- Widget: Tags -->
+				<div class="widget">
+
+					<div class="title">Tags</div>
+					<div class="tags">
+						<a href="#" class="tag">web</a>
+						<a href="#" class="tag">design</a>
+						<a href="#" class="tag">clean</a>
+						<a href="#" class="tag">minimal</a>
+						<a href="#" class="tag">pixel perfect</a>
+						<a href="#" class="tag">blog</a>
+						<a href="#" class="tag">gallery</a>
+					</div>
+
+				</div>
+				<!-- /Widget: Tags -->
+
+				<!-- Widget: Categories -->
+				<div class="widget">
+
+					<div class="title">Meta</div>
+					<ul class="sidebar-menu">
+						<li><a href="#"><i class="icon fa fa-fw fa-sign-in"></i> Login</a></li>
+						<li><a href="#"><i class="icon fa fa-fw fa-rss-square"></i> RSS Entries</a></li>
+						<li><a href="#"><i class="icon fa fa-fw fa-comments-o"></i> RSS Comments</a></li>
+					</ul>
+
+				</div>
+				<!-- /Widget: Categories -->
+
+			</div>
+			<!-- /Blog Sidebar -->
+
+		</div>
+	</div>
+
+</main>
+<!-- /Main -->
+
+<% end %>

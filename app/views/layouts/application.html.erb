@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ainotek</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <!-- Page title -->
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="("img/favicon.png")">
+  </head>
+
+  <body>
+  <!-- Header -->
+  <header id="home" class="header">
+      <nav id="navigation" class="navbar affix">
+
+
+          <!-- Top Line -->
+          <div class="top-line">
+              <div class="container">
+                  <div class="row">
+
+                      <!-- Company Information -->
+                      <div class="col-md-7 contact-information">
+                          <ul class="list-inline">
+                              <li><i class="icon fa fa-fw fa-phone"></i> <%= "48805663" %> </li>
+                              <li><i class="icon fa fa-fw fa-envelope-o"></i> <%= "info@ainotek.com" %> </li>
+                          </ul>
+                      </div>
+                      <!-- /Company Information -->
+
+                      <!-- Search Form -->
+                      <div class="col-md-3">
+                          <div class="search-form">
+                              <input type="email" class="form-control" placeholder="Search..." required>
+                              <button class="btn btn-search"><i class="fa fa-fw fa-search"></i></button>
+                          </div>
+                      </div>
+                      <!-- /Search Form -->
+
+                      <!-- User Cabinet Links -->
+                      <div class="col-md-2 user-cabinet-links">
+                          <ul class="list-inline">
+                              <li><a href="#" data-toggle="modal" data-target="#sign-in"><i class="icon fa fa-fw fa-sign-in"></i> Sign in</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#sign-up"><i class="icon fa fa-fw fa-edit"></i> Sign up</a></li>
+                          </ul>
+                      </div>
+                      <!-- /User Cabinet Links -->
+
+                  </div>
+              </div>
+          </div>
+          <!-- /Top Line -->
+
+
+          <!-- Toggle Button -->
+          <div class="top-line-slide">
+              <div class="top-line-toggle in">
+                  <i class="icon fa fa-fw fa-angle-down"></i>
+              </div>
+          </div>
+          <!-- /Toggle Button -->
+
+          <!-- Top Menu -->
+          <div class="top-menu">
+              <div class="container">
+
+                  <div class="row">
+                      <div class="col-md-12">
+
+                          <!-- Navigation Header -->
+                          <div class="navbar-header">
+
+                              <!-- Toggle Button -->
+                              <button type="button"
+                                      class="navbar-toggle collapsed"
+                                      data-toggle="collapse"
+                                      data-target="#main-menu"
+                                      aria-expanded="false"
+                                      aria-controls="main-menu">
+
+                                  <span class="sr-only">Toggle Navigation</span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+
+                              </button>
+                              <!-- /Toggle Button -->
+
+                              <!-- Brand -->
+                              <a href="#" class="brand">
+                                  <div class="logo-big">
+                                      <%= image_tag("logo.png" , :alt => "") %>
+                                  </div>
+                                  <div class="logo-small">
+                                      <%= image_tag("logo-small.png" , :alt => "") %>
+                                  </div>
+                              </a>
+                              <!-- /Brand -->
+
+                          </div>
+                          <!-- /Navigation Header -->
+
+                          <!-- Navigation -->
+                          <div id="main-menu" class="navbar-collapse collapse">
+                              <ul class="nav navbar-nav navbar-right">
+                                  <li>
+                                      <a href="<%= root_path %>">Accueil</a>
+                                  </li>
+                                  <li>
+                                      <a href="<%= about_path %>">A propos</a>
+                                  </li>
+                                  <li>
+                                      <a href="<%= projects_path %>">Portfolio</a>
+                                  </li>
+                                  <li>
+                                      <a href="<%= posts_path %>">Blog</a>
+                                  </li>
+                                  <li><a href="<%= contact_path %>">Contact</a></li>
+                              </ul>
+                          </div>
+                          <!-- /Navigation -->
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Top Menu -->
+
+      </nav>
+  </header>
+  <!-- /Header -->
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-<%= type %>" role="alert">
+      <%= msg %>
+    </div>
+  <% end %>
+
+
+    <%= yield %>
+
+
+<!-- Footer -->
+<footer class="footer section section-small no-pb bg-dark">
+    <div class="container">
+        <div class="row">
+
+            <!-- Footer Column -->
+            <div class="col-sm-3">
+                <div class="brand">
+                    Aino<span class="text-theme">Tek</span>
+                </div>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available.
+                </p>
+                <div class="title">Our Address:</div>
+                <p>
+                    988782, Our Street, L.A.
+                </p>
+                <ul class="list">
+                    <li><span>Phone:</span> +1 (201) 987-1185</li>
+                    <li><span>E-mail:</span> clients@example.com</li>
+                </ul>
+            </div>
+            <!-- /Footer Column -->
+
+            <!-- Footer Column -->
+            <div class="col-sm-2">
+                <div class="h4 title">Navigation:</div>
+                <ul class="list menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /Footer Column -->
+
+            <!-- Footer Column -->
+            <div class="col-sm-3">
+                <div class="h4 title">From Blog</div>
+                <div class="media post">
+                    <div class="media-left">
+                        <div class="image">
+                            <%= image_tag("last-post-01.jpg" , :alt => "") %>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p class="text">
+                            It is a long established fact that a reader will be distracted.
+                        </p>
+                        <a href="#">Read more <i class="fa fa-angle-double-right"></i> </a>
+                    </div>
+                </div>
+                <div class="media post">
+                    <div class="media-left">
+                        <div class="image">
+                            <%= image_tag("last-post-02.jpg" , :alt => "") %>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p class="text">
+                            It is a long established fact that a reader will be distracted.
+                        </p>
+                        <a href="#">Read more <i class="fa fa-angle-double-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /Footer Column -->
+
+            <!-- Footer Column -->
+            <div class="col-sm-4">
+
+                <div class="h4 title">Subscribe to our Newsletter</div>
+                <p>There are many variations of passages of Lorem Ipsum available</p>
+
+                <div class="subscribe-form">
+                    <form method="post" class="form-inline form-ajax">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your E-mail...*" required>
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-theme"><i class="fa fa-fw fa-envelope"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <ul class="social-big">
+                    <li>
+                        <a href="#">
+                            <i class="icon icon-facebook fa fa-fw fa-facebook"></i>
+                            <div class="text">
+                                Like us
+                                <span>on Facebook</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon icon-rss fa fa-fw fa-rss"></i>
+                            <div class="text">
+                                Subscribe
+                                <span>to RSS Feeds</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /Footer Column -->
+
+        </div>
+    </div>
+
+    <div class="bottom-line">
+        <div class="container">
+            <div class="row">
+
+                <!-- Copyright -->
+                <div class="col-md-7 col-sm-12">
+                    <p class="copyright">
+                        Copyright &copy; 2015-2016 <strong>Valery Timofeev</strong>
+                    </p>
+                    <div class="links">
+                        <a  href="#">Information</a>
+                        <a  href="#">Terms of service</a>
+                        <a  href="#">Private police</a>
+                    </div>
+                </div>
+                <!-- /Copyright -->
+
+                <!-- Footer Social -->
+                <div class="col-md-5 col-sm-12">
+
+                    <ul class="list-inline">
+                        <li><a href="#" class="icon fa fa-fw fa-facebook"></a></li>
+                        <li><a href="#" class="icon fa fa-fw fa-twitter"></a></li>
+                        <li><a href="#" class="icon fa fa-fw fa-google-plus"></a></li>
+                        <li><a href="#" class="icon fa fa-fw fa-dribbble"></a></li>
+                        <li><a href="#" class="icon fa fa-fw fa-pinterest"></a></li>
+                    </ul>
+
+                    <ul class="list-inline">
+                        <li><a href="#" class="icon fa fa-fw fa-phone"></a>  +1 (201) 987-1185</li>
+                        <li><a href="#" class="icon fa fa-fw fa-envelope"></a> clients@example.com</li>
+                        <li><a href="#" class="icon fa fa-fw fa-skype"></a> YourCompany</li>
+                    </ul>
+
+                </div>
+                <!-- /Footer Social -->
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- /Footer -->
+  </body>
+</html>

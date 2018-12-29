@@ -1,0 +1,45 @@
+
+<!-- Page Header -->
+<div class="inner-page-header">
+	<div class="container">
+		<div class="row">
+
+			<!-- Page Title -->
+			<div class="col-md-8">
+				<h1 class="title">Edditing Categories</h1>
+				<div class="subtitle">There are many variations of passages </div>
+			</div>
+			<!-- /Page Title -->
+
+			<!-- Breadcrumbs -->
+			<div class="col-md-4">
+				<ul class="breadcrumb">
+					<li><i class="fa fa-fw fa-home"></i> <a href="<%= root_path %>">Home</a></li>
+					<li><a href="<%= posts_path %>">Blog</a></li>
+					<li>Categories</li>
+				</ul>
+			</div>
+			<!-- /Breadcrumbs -->
+
+		</div>
+	</div>
+</div>
+<!-- /Page Header -->
+
+<%= form_for @category do |f| %>
+
+
+	<h1 class="title">Add Categories</h1>
+	<div class="form-group">
+		<%= f.text_field :name, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.text_field :slug, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<button class="btn btn-red" type="reset">Annuler</button>
+		<button class="btn btn-blue" type="submit">Edit category</button>
+	</div>
+
+<% end %>
